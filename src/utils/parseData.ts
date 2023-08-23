@@ -16,7 +16,7 @@ export const parseData = ({ videos, channels }: Data): HomePageVideos[] => {
       videoLiveBroadcastContent: item?.snippet?.liveBroadcastContent,
       videoPublishedAt: timeSince(new Date(item?.snippet?.publishedAt)),
       videoDuration: parseVideoDuration(item?.contentDetails?.duration),
-      videoImage: { urlImage: item?.snippet?.thumbnails?.standard?.url },
+      videoImage: { urlImage: item?.snippet?.thumbnails?.medium?.url },
       videoStatistics: {
         commentCount: abbreviateNumber(Number(item?.statistics?.commentCount), 2),
         favoriteCount: abbreviateNumber(Number(item?.statistics?.favoriteCount), 2),

@@ -24,12 +24,15 @@ export const useSearchVideos = () => {
 
   useEffect(() => {
     return () => {
-      clearVideos()
+      dispatch(clearVideos())
     }
-  })
+  }, [dispatch])
 
   useEffect(() => {
-    if (query !== null && query !== undefined) searchingVideos(false, query)
+    if (query !== null && query !== undefined) {
+      dispatch(clearVideos())
+      searchingVideos(false, query)
+    }
     return () => {
       cancelEndpoint()
     }

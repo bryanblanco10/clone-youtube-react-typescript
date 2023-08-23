@@ -20,7 +20,8 @@ export const DetailVideo: FC<Props> = ({ detail }) => {
               <img
                 className="h-full w-full object-cover"
                 src={detail?.channelInfo?.channelImage?.urlImage}
-                alt=""
+                alt={detail?.channelInfo?.channelId}
+                loading='lazy'
               />
             </div>
           </div>

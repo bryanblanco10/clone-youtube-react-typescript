@@ -1,7 +1,6 @@
 export * from './Card'
 export * from './Navbar/components/FormSearch'
 export * from './Navbar'
-export * from './SearchCard'
 export * from './Sidebar/components/ListFisrtItemMenu/components/ItemMenu'
 export * from './Sidebar/components/ListFisrtItemMenu'
 export * from './Sidebar/components/ListSecondItemMenu/ItemLink'

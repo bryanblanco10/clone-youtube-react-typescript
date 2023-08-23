@@ -12,7 +12,7 @@ export const Card: FC<Props> = ({ item }) => {
     <div className="flex flex-col mb-8" style={{ marginRight: 'calc(16 / 2)' }}>
       <Link to={`/watch/${item?.video?.videoId}`}>
         <div className="relative md:rounded-xl overflow-hidden">
-          <img src={item?.video?.videoImage?.urlImage} alt="" className="h-full w-full object-cover" />
+          <img src={item?.video?.videoImage?.urlImage} alt={item?.video?.videoId} className="h-full w-full object-cover" loading='lazy' />
           <span className="absolute bottom-2 right-2 bg-black py-1 px-2 text-white text-xs rounded-md">
             {item?.video?.videoDuration}
           </span>

@@ -20,23 +20,14 @@ export const router = createBrowserRouter([
         }
       },
       {
-        path: '/results',
+        path: '/results/:query',
         async lazy () {
-          const { Search } = await import(/* webpackChunkName: 'Search' */ '@/pages')
+          const { ResultSearch } = await import(/* webpackChunkName: 'ResultSearch' */ '@/pages')
           return {
-            Component: Search
+            Component: ResultSearch
           }
         }
       },
-      // {
-      //   path: '/results/:query',
-      //   async lazy () {
-      //     const { Search } = await import(/* webpackChunkName: 'Search' */ '@/pages')
-      //     return {
-      //       Component: Search
-      //     }
-      //   }
-      // },
       {
         path: '/watch/:id',
         async lazy () {
